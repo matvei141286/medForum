@@ -9,23 +9,28 @@ import java.util.*;
 @Setter
 @ToString
 @EqualsAndHashCode
-@RequiredArgsConstructor
+
 
 
 public class Message {
 
 
-    private Date date = new Date(); //дата создания сообщения
-    private  final String text; //текст сообщения
-
-    private final User user; //пользователь, создавший сообщение
+    private Date date; //дата создания сообщения
+    private String text; //текст сообщения
+    private User fromUser; //отправитель сообщения
+    private User toUser; //адресат
     private List<Media> listMedia = new ArrayList<>(); //список прикрепленных медиафайлов к сообщению
     private StatusMessage status; //статус сообщения  DELIVERED/UNDELIVERED
 
+    public Message(String text, User fromUser, User toUser, Date date){
+        this.text = text;
+        this.fromUser = fromUser;
+        this.toUser = toUser;
+        this.date = date;
+
+    }
 
 
-
-    //Инкрементирование счетчика сообщения
 
 
     public void addMedia(Media media) {
