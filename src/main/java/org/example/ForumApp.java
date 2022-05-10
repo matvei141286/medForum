@@ -4,6 +4,9 @@ package org.example;
 import java.util.*;
 
 public class ForumApp {
+
+    private static List<Message> listMessage = new ArrayList<>(); //список для хранения отправленных сообщений
+
     public static void main(String[] args) {
 
         //Создание пользователя
@@ -25,49 +28,13 @@ public class ForumApp {
 
 
 
-        /* Отладочный вывод отправленного и сохраненного в черновике сообщения
-        Message array[] =new  Message[user.getDraftMessages().size()];
-        array =user.getDraftMessages().toArray(array);
-        System.out.println(array[0].getText());
-
-        Message array2[] =new  Message[user.getSendMessages().size()];
-        array2 =user.getSendMessages().toArray(array2);
-        System.out.println(array2[0].getText());
-        */
-
-        /* блок тестирования прикрепеления видеофайла к третьему сообщению
-        Message array3[] = new  Message[user.getSendMessages().size()];
-        array3 =user.getSendMessages().toArray(array3);
-        Media array4[] = new Media[array3[1].getListMedia().size()];
-        array4 = array3[1].getListMedia().toArray(array4);
-        System.out.println(array4[0].getName());
-        System.out.println(array4[0].getFileExtension());
-        System.out.println(array4[0].getSize());
-        System.out.println(array4[0].getTypeMedia());
-        System.out.println(array4[0].getDateCreation());
-        */
-
-        // блок тестирования прикрепеления картинки к четвертому сообщению
-        /*
-        Message array5[] = new  Message[user.getSendMessages().size()];
-        array5 =user.getSendMessages().toArray(array5);
-        Media array6[] = new Media[array5[2].getListMedia().size()];
-        array6 = array5[2].getListMedia().toArray(array6);
-        System.out.println(array6[0].getName());
-        System.out.println(array6[0].getFileExtension());
-        System.out.println(array6[0].getSize());
-        System.out.println(array6[0].getTypeMedia());
-        System.out.println(array6[0].getDateCreation());
-        */
-
-
-        //Проверка MessageBox
-        /*
-        List<Message> listMessageBox = new ArrayList<Message>();
-        listMessageBox = MessageBox.getList();
-        System.out.println(listMessageBox.size());
-        */
-
-
     }
+
+    // сохранение отправленного сообщения в списке
+    public static void addMessage(Message message) {
+        listMessage.add(message);
+    }
+
+    public static List<Message> getListMessage() {return listMessage;}
+
 }

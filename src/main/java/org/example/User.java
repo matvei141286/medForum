@@ -27,9 +27,9 @@ public class User {
 
     private Message message = null; //переменная для хранения набираемого сообщения
 
-    private List<Message> draftMessages = new ArrayList<Message>(); //черновики сообщений
+    private List<Message> draftMessages = new ArrayList<>(); //черновики сообщений
 
-    private List<Message> sendMessages = new ArrayList<Message>(); //отправленные сообщения пользователя
+    private List<Message> sendMessages = new ArrayList<>(); //отправленные сообщения пользователя
 
     User(String surname, String name, String patronymic, String birthday, String email, String mobilePhone) {
         this.surname = surname;
@@ -74,7 +74,7 @@ public class User {
     public void sendMessage() {
         this.message.setStatus(org.example.StatusMessage.DELIVERED);
         this.sendMessages.add(this.message);
-        MessageBox.addMessage(this.message);
+        ForumApp.addMessage(this.message);
         this.message = null;
     }
 
