@@ -1,11 +1,17 @@
 package org.example;
 
+import java.util.*;
+
 public class UserService {
-    public int countUsers;
+    private int countUsers;
+    private UserRepository repoUsers = new UserRepository();
+
 
     public User createUser(String surname, String name, String patronymic, String birthday, String email, String mobilePhone){
         countUsers++;
-        return new User(surname, name, patronymic, birthday, email, mobilePhone, countUsers);
+        User newUser = new User(surname, name, patronymic, birthday, email, mobilePhone, countUsers);
+        repoUsers.addUser(newUser);
+        return newUser;
     }
 
     public void  getUserInfo(User user){
