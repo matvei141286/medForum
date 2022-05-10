@@ -18,7 +18,7 @@ public class Media {
     private String typeMedia;
     private Date dateCreation;
 
-    Media (String name, String fileExtension, String size) {
+    public Media (String name, String fileExtension, String size) {
         this.name = name;
         this.fileExtension= fileExtension;
         this.size = size;

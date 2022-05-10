@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 
-public class Video extends Media implements Attachment {
+public class Video extends Media  {
     private String typeMedia = "Video";
 
     Video(String name, String fileExtension, String size) {
