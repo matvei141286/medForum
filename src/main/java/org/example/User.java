@@ -24,11 +24,7 @@ public class User {
     private String email; //email пользователя
     private String mobilePhone; //номер телефона пользователя
 
-    private Message message; //переменная для хранения набираемого сообщения
 
-    private List<Message> draftMessages = new ArrayList<>(); //черновики сообщений
-
-    private List<Message> sendMessages = new ArrayList<>(); //отправленные сообщения пользователя
 
     public User(String surname, String name, String patronymic, String birthday, String email, String mobilePhone, int id) {
         this.surname = surname;
