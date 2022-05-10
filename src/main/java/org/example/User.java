@@ -72,7 +72,7 @@ public class User {
 
     // Отправка сообщения
     public void sendMessage() {
-        this.message.setStatus(org.example.Message.StatusMessage.DELIVERED);
+        this.message.setStatus(org.example.StatusMessage.DELIVERED);
         this.sendMessages.add(this.message);
         MessageBox.addMessage(this.message);
         this.message = null;
@@ -80,7 +80,7 @@ public class User {
 
     //сохранение неотправленного сообщения в MessageBox
     public void saveMessage() {
-        this.message.setStatus(org.example.Message.StatusMessage.UNDELIVERED);
+        this.message.setStatus(org.example.StatusMessage.UNDELIVERED);
         this.draftMessages.add(this.message);
         this.message = null;
     }
