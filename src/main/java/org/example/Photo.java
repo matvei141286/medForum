@@ -11,9 +11,9 @@ import lombok.ToString;
 @EqualsAndHashCode
 
 class Photo extends Media {
-    private String typeMedia = "Photo";
+    private static final String typeMedia = "Photo";
 
-    Photo(String name, String fileExtension, String size) {
+    public Photo(String name, String fileExtension, String size) {
         super(name, fileExtension, size);
     }
 
