@@ -11,7 +11,7 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
-public class MessageRepository {
+public class MessageRepository implements MessageRepositoryInterface {
     private static MessageRepository messageRepository;
     private List<Message> listMessages = new ArrayList<>();
 

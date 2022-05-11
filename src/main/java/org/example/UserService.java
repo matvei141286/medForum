@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-public class UserService {
+public class UserService implements UserServiceInterface {
     private int countUsers;
     private UserRepository repoUsers =  UserRepository.getUserRepository();
 

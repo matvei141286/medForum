@@ -11,7 +11,7 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
-public class UserRepository {
+public class UserRepository implements UserRepositoryInterface {
     //список для сохранения User
     private List<User> listUsers = new ArrayList<>();
     private static UserRepository userRepository;

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Date;
 
-public class MessageService {
+public class MessageService implements MessageServiceInterface {
     private static MessageService messageService;
     private int countMessages;
     private Message temporaryMessage;
@@ -22,9 +22,28 @@ public class MessageService {
     public Message createMessage (String text, User fromUser, User toUser){
         countMessages++;
         Message newMessage = new Message(text, fromUser, toUser, countMessages);
-        repoMessages.addMessage(newMessage);
+        //repoMessages.addMessage(newMessage);
+        this.temporaryMessage = newMessage;
         return newMessage;
     }
+
+    public boolean sendMessage() {
+        if (this.temporaryMessage != null) {
+            repoMessages.addMessage(this.temporaryMessage);
+            this.temporaryMessage = null;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addMedia(Media media) {
+        if (this.temporaryMessage != null) {
+            this.temporaryMessage.addMedia(media);
+            return true;
+        }
+        return false;
+    }
+
     public void  getMessageInfo(Message message){
         System.out.println("Date: " + message.getDate());
         System.out.println("From: " + message.getFromUser());
