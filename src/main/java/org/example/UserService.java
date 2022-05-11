@@ -4,7 +4,19 @@ import java.util.*;
 
 public class UserService {
     private int countUsers;
-    private UserRepository repoUsers = new UserRepository();
+    private UserRepository repoUsers =  UserRepository.getUserRepository();
+
+    private static UserService userService;
+
+    private UserService() {};//закрытие конструктора
+    //реализация Singleton
+    public static UserService getUserService() {
+        if (userService == null) {
+            userService = new UserService();
+        }
+        return userService;
+    }
+
 
 
     public User createUser(String surname, String name, String patronymic, String birthday, String email, String mobilePhone){

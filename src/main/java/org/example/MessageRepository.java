@@ -12,7 +12,18 @@ import java.util.*;
 @EqualsAndHashCode
 
 public class MessageRepository {
+    private static MessageRepository messageRepository;
     private List<Message> listMessages = new ArrayList<>();
+
+    private MessageRepository() {};//закрытие конструктора
+
+    public static MessageRepository getMessageRepository() {
+        if (messageRepository == null) {
+            messageRepository = new MessageRepository();
+        }
+        return messageRepository;
+    }
+
 
     //Добавление нового пользователя
     public void addMessage(Message message){

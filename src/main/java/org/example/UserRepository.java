@@ -14,6 +14,16 @@ import java.util.*;
 public class UserRepository {
     //список для сохранения User
     private List<User> listUsers = new ArrayList<>();
+    private static UserRepository userRepository;
+    private UserRepository() {};//закрытие конструктора
+
+    //реализация Singleton
+    public static UserRepository getUserRepository() {
+        if (userRepository == null) {
+            userRepository = new UserRepository();
+        }
+        return userRepository;
+    }
 
     //Добавление нового пользователя
     public void addUser(User user){

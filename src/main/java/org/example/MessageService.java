@@ -3,10 +3,21 @@ package org.example;
 import java.util.Date;
 
 public class MessageService {
+    private static MessageService messageService;
     private int countMessages;
     private Message temporaryMessage;
 
-    private MessageRepository repoMessages = new MessageRepository();
+
+    private MessageRepository repoMessages = MessageRepository.getMessageRepository();
+
+    private MessageService() {};//закрытие конструктора
+    //еализация Singleton
+    public static MessageService getMessageService() {
+        if (messageService == null) {
+            messageService = new MessageService();
+        }
+        return messageService;
+    }
 
     public Message createMessage (String text, User fromUser, User toUser){
         countMessages++;
