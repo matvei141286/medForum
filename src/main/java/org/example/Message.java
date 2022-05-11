@@ -33,10 +33,4 @@ public class Message {
 
 
 
-    public void addMedia(Media media) {
-        this.listMedia.add(media);
-    }
-
-
-
 }

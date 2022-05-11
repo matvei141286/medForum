@@ -39,6 +39,19 @@ public class MessageRepository implements MessageRepositoryInterface {
         System.out.println("The message was not found");
         return null;
     }
+
+    public boolean deleteMessageById(int id){
+        for (Message message: listMessages){
+            if(message.getId() == id) {
+                this.listMessages.remove(message);
+                return true;
+            }
+        }
+        System.out.println("The message with same ID was not found");
+        return false;
+    }
+
+
     //получение пользователей в виде массива
     public Message[] getMessages(){
         return listMessages.toArray(new Message[listMessages.size()]);

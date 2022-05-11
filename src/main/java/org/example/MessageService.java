@@ -38,7 +38,7 @@ public class MessageService implements MessageServiceInterface {
 
     public boolean addMedia(Media media) {
         if (this.temporaryMessage != null) {
-            this.temporaryMessage.addMedia(media);
+            this.temporaryMessage.getListMedia().add(media);
             return true;
         }
         return false;
