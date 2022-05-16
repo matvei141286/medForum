@@ -14,5 +14,6 @@ public class ForumApp {
         messageService.createMessage("First message without media", user1, user2); //создание первого текстового сообщения
         messageService.sendMessage();//отправка первого сообщения
         messageService.getMessageInfo(messageService.getRepoMessages().getMessageById(1)); //вывод сохраненного сообщения
+        messageService.getRepoMessages().deleteMessageById(1);
     }
 }

@@ -42,6 +42,7 @@ public class MessageRepository implements MessageRepositoryInterface {
         for (Message message: listMessages){
             if(message.getId() == id) {
                 this.listMessages.remove(message);
+                System.out.println("The message with ID = "+ id +" was deleted");
                 return true;
             }
         }

@@ -11,11 +11,8 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
-
-
 public class User {
     private int id; //уникальный id пользователя
-
     private Date dateRegistration = new Date(); // дата регистрации пользователя
     private String surname; //фамилия пользователя
     private String name; //имя пользователя
@@ -23,8 +20,6 @@ public class User {
     private String birthday; //дата рождения пользователя
     private String email; //email пользователя
     private String mobilePhone; //номер телефона пользователя
-
-
 
     public User(String surname, String name, String patronymic, String birthday, String email, String mobilePhone, int id) {
         this.surname = surname;

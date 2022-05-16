@@ -25,7 +25,6 @@ public class UserRepository implements UserRepositoryInterface {
         }
         return userRepository;
     }
-
     //Добавление нового пользователя
     public void addUser(User user){
         listUsers.add(user);
@@ -40,10 +39,4 @@ public class UserRepository implements UserRepositoryInterface {
         System.out.println("The user was not found");
         return null;
     }
-    //получение пользователей в виде массива
-    public User[] getUsers(){
-        return listUsers.toArray(new User[listUsers.size()]);
-    }
-
-
 }
