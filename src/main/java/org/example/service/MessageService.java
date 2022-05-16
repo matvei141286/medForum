@@ -4,9 +4,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.example.enums.User;
 import org.example.domain.Media;
 import org.example.domain.Message;
+import org.example.domain.User;
 import org.example.repository.MessageRepository;
 
 @Getter
@@ -14,7 +14,7 @@ import org.example.repository.MessageRepository;
 @ToString
 @EqualsAndHashCode
 
-public class MessageService implements MessageServiceInterface {
+public class MessageService implements IMessageService {
     private static MessageService messageService;
     private int countMessages;
     private Message temporaryMessage;

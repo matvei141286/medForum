@@ -3,8 +3,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.example.enums.User;
 import org.example.repository.UserRepository;
+import org.example.domain.User;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 @Setter
 @ToString
 @EqualsAndHashCode
-public class UserService implements UserServiceInterface {
+public class UserService implements IUserService {
     private int countUsers;
     private UserRepository repoUsers =  UserRepository.getUserRepository();
     private static UserService userService;

@@ -12,7 +12,7 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
-public class MessageRepository implements MessageRepositoryInterface {
+public class MessageRepository implements IMessageRepository {
     private static MessageRepository messageRepository;
     private List<Message> listMessages = new ArrayList<>();
 

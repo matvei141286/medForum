@@ -1,8 +1,9 @@
 package org.example;
 
-import org.example.enums.User;
+import org.example.domain.User;
 import org.example.service.MessageService;
 import org.example.service.UserService;
+import org.example.domain.User;
 public class ForumApp {
     public static void main(String[] args) {
         UserService userService = UserService.getUserService();

@@ -2,7 +2,7 @@ package org.example.domain;
 
 import lombok.*;
 import org.example.enums.StatusMessage;
-import org.example.enums.User;
+
 import java.util.*;
 @Getter
 @Setter

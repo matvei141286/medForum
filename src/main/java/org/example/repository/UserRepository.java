@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.example.enums.User;
+import org.example.domain.User;
 
 import java.util.*;
 @Getter
@@ -12,7 +12,7 @@ import java.util.*;
 @ToString
 @EqualsAndHashCode
 
-public class UserRepository implements UserRepositoryInterface {
+public class UserRepository implements IUserRepository {
     //список для сохранения User
     private List<User> listUsers = new ArrayList<>();
     private static UserRepository userRepository;
