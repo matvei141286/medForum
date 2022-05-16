@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.example.domain.Media;
-
 @Getter
 @Setter
 @ToString
@@ -13,7 +12,6 @@ import org.example.domain.Media;
 
 public class Video extends Media {
     private static final String typeMedia = "Video";
-
     public Video(String name, String fileExtension, String size) {
         super(name, fileExtension, size);
     }

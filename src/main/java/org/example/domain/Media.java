@@ -1,9 +1,7 @@
 package org.example.domain;
 
 import lombok.*;
-
 import java.util.*;
-
 @Getter
 @Setter
 @ToString

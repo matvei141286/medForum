@@ -24,8 +24,6 @@ public class MessageRepository implements MessageRepositoryInterface {
         }
         return messageRepository;
     }
-
-
     //Добавление нового пользователя
     public void addMessage(Message message){
         listMessages.add(message);
@@ -40,7 +38,6 @@ public class MessageRepository implements MessageRepositoryInterface {
         System.out.println("The message was not found");
         return null;
     }
-
     public boolean deleteMessageById(int id){
         for (Message message: listMessages){
             if(message.getId() == id) {
@@ -51,11 +48,8 @@ public class MessageRepository implements MessageRepositoryInterface {
         System.out.println("The message with same ID was not found");
         return false;
     }
-
-
     //получение пользователей в виде массива
     public Message[] getMessages(){
         return listMessages.toArray(new Message[listMessages.size()]);
     }
-
 }
